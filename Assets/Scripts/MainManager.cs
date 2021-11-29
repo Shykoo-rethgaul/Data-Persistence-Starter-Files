@@ -12,11 +12,14 @@ public class MainManager : MonoBehaviour
 
     public Text ScoreText;
     public GameObject GameOverText;
+    public GameObject ReturnButton;
     
     private bool m_Started = false;
     private int m_Points;
     
     private bool m_GameOver = false;
+
+    public static MainManager Instance;
 
     
     // Start is called before the first frame update
@@ -72,5 +75,8 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
+        ReturnButton.SetActive(true);
     }
+    
+
 }
